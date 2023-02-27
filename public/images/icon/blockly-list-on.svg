@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+  <g id="그룹_4012" data-name="그룹 4012" transform="translate(-4057 -2876)">
+    <g id="사각형_2529" data-name="사각형 2529" transform="translate(4057 2876)" fill="#5f58bf" stroke="#5f58bf" stroke-width="2" opacity="0">
+      <rect width="38" height="38" rx="14" stroke="none"/>
+      <rect x="1" y="1" width="36" height="36" rx="13" fill="none"/>
+    </g>
+    <g id="그룹_3713" data-name="그룹 3713" transform="translate(2908 2551)">
+      <g id="그룹_3712" data-name="그룹 3712">
+        <rect id="사각형_2559" data-name="사각형 2559" width="19" height="2" transform="translate(1160 352) rotate(-90)" fill="#fff"/>
+        <path id="다각형_46" data-name="다각형 46" d="M4,0,8,5H0Z" transform="translate(1165 355) rotate(180)" fill="#fff"/>
+      </g>
+      <rect id="사각형_2555" data-name="사각형 2555" width="4" height="4" transform="translate(1170 351) rotate(-90)" fill="#fff"/>
+      <rect id="사각형_2556" data-name="사각형 2556" width="4" height="4" transform="translate(1170 346) rotate(-90)" fill="#fff"/>
+      <rect id="사각형_2557" data-name="사각형 2557" width="4" height="4" transform="translate(1170 341) rotate(-90)" fill="#fff"/>
+      <g id="사각형_2560" data-name="사각형 2560" transform="translate(1166 333)" fill="none" stroke="#fff" stroke-width="2">
+        <rect width="12" height="22" stroke="none"/>
+        <rect x="1" y="1" width="10" height="20" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

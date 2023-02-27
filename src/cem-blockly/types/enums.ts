@@ -1,0 +1,85 @@
+import { javascriptGenerator } from 'blockly/javascript';
+
+export enum EBlockStrictType {
+  ANY = '',
+  NUMBER = 'Number',
+  STRING = 'String',
+  BOOLEAN = 'Boolean',
+  ARRAY = 'Array',
+  DATETIME = 'Date',
+  ANGLE = 'Angle',
+  COORDINATES = 'Coordinates',
+  COLOUR = 'Colour',
+}
+
+export enum ERunningState {
+  NONE = 'none',
+  RUNNING = 'running',
+  PAUSED = 'paused',
+}
+
+export enum EventBlockType {
+  START = 'block_start',
+  EVENT_KEYBOARD = 'event_keyboard',
+  EVENT_POINTER = 'event_pointer',
+  EVENT_BLOCK_CLICK = 'event_block_click',
+  EVENT_OBJECT_CLICK = 'event_object_click',
+  EVENT_OBJECT_CHANGE = 'event_object_change',
+  EVENT_GENERATE = 'event_generate',
+  EVENT_GENERATE_RUN = 'event_generate_run',
+}
+
+export enum EBlockHueColour {
+  CONSTRUCTOR = '#4094f2',
+  OBSERVER = '#00baa4',
+  CONTROL = '#5ba55b',
+  LOGIC = '#ff79a7',
+  LIST = '#745ba5',
+  EVENT = '#00c760',
+  TEXT = '#a77767',
+  MATH = '#5b67a5',
+  MEASURE = '#da70d6',
+  GEOMETRY = '#8e68f5',
+  VARIABLE = '#ff6200',
+  FUNCTION = '#ff607f',
+  IMAGE = '#f56270',
+  TIME = '#4667ef',
+}
+
+export enum EOperatorOrder {
+  ATOMIC = javascriptGenerator.ORDER_ATOMIC = 0,
+  NEW = javascriptGenerator.ORDER_NEW = 1.1,
+  MEMBER = javascriptGenerator.ORDER_MEMBER = 1.2,
+  FUNCTION_CALL = javascriptGenerator.ORDER_FUNCTION_CALL = 2,
+  INCREMENT = javascriptGenerator.ORDER_INCREMENT = 3,
+  DECREMENT = javascriptGenerator.ORDER_DECREMENT = 3,
+  BITWISE_NOT = javascriptGenerator.ORDER_BITWISE_NOT = 4.1,
+  UNARY_PLUS = javascriptGenerator.ORDER_UNARY_PLUS = 4.2,
+  UNARY_NEGATION = javascriptGenerator.ORDER_UNARY_NEGATION = 4.3,
+  LOGICAL_NOT = javascriptGenerator.ORDER_LOGICAL_NOT = 4.4,
+  TYPEOF = javascriptGenerator.ORDER_TYPEOF = 4.5,
+  VOID = javascriptGenerator.ORDER_VOID = 4.6,
+  DELETE = javascriptGenerator.ORDER_DELETE = 4.7,
+  AWAIT = javascriptGenerator.ORDER_AWAIT = 4.8,
+  EXPONENTIATION = javascriptGenerator.ORDER_EXPONENTIATION = 5.0,
+  MULTIPLICATION = javascriptGenerator.ORDER_MULTIPLICATION = 5.1,
+  DIVISION = javascriptGenerator.ORDER_DIVISION = 5.2,
+  MODULUS = javascriptGenerator.ORDER_MODULUS = 5.3,
+  SUBTRACTION = javascriptGenerator.ORDER_SUBTRACTION = 6.1,
+  ADDITION = javascriptGenerator.ORDER_ADDITION = 6.2,
+  BITWISE_SHIFT = javascriptGenerator.ORDER_BITWISE_SHIFT = 7,
+  RELATIONAL = javascriptGenerator.ORDER_RELATIONAL = 8,
+  IN = javascriptGenerator.ORDER_IN = 8,
+  INSTANCEOF = javascriptGenerator.ORDER_INSTANCEOF = 8,
+  EQUALITY = javascriptGenerator.ORDER_EQUALITY = 9,
+  BITWISE_AND = javascriptGenerator.ORDER_BITWISE_AND = 10,
+  BITWISE_XOR = javascriptGenerator.ORDER_BITWISE_XOR = 11,
+  BITWISE_OR = javascriptGenerator.ORDER_BITWISE_OR = 12,
+  LOGICAL_AND = javascriptGenerator.ORDER_LOGICAL_AND = 13,
+  LOGICAL_OR = javascriptGenerator.ORDER_LOGICAL_OR = 14,
+  CONDITIONAL = javascriptGenerator.ORDER_CONDITIONAL = 15,
+  ASSIGNMENT = javascriptGenerator.ORDER_ASSIGNMENT = 16,
+  YIELD = javascriptGenerator.ORDER_YIELD = 16.5,
+  COMMA = javascriptGenerator.ORDER_COMMA = 17,
+  NONE = javascriptGenerator.ORDER_NONE = 99,
+}

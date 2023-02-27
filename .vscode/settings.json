@@ -1,0 +1,16 @@
+{
+  "editor.tabSize": 2,
+  "editor.rulers": [
+    100
+  ],
+  "files.eol": "\n",
+  "eslint.format.enable": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "search.exclude": {
+    "**/dist": true,
+    "**/public": true,
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true
+  }
+}

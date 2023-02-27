@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+  <g id="그룹_3914" data-name="그룹 3914" transform="translate(-1576 -3008)">
+    <rect id="사각형_2524" data-name="사각형 2524" width="38" height="38" rx="14" transform="translate(1576 3008)" fill="none" opacity="0.002"/>
+    <g id="그룹_3676" data-name="그룹 3676" transform="translate(1224 2678)">
+      <g id="그룹_3616" data-name="그룹 3616">
+        <rect id="사각형_2455" data-name="사각형 2455" width="17" height="2" transform="translate(360 340)" fill="#af693e"/>
+        <rect id="사각형_2457" data-name="사각형 2457" width="3" height="2" transform="translate(377 340) rotate(90)" fill="#af693e"/>
+        <rect id="사각형_2458" data-name="사각형 2458" width="3" height="2" transform="translate(362 340) rotate(90)" fill="#af693e"/>
+      </g>
+      <g id="그룹_3617" data-name="그룹 3617" transform="translate(0 1)">
+        <rect id="사각형_2456" data-name="사각형 2456" width="18" height="2" transform="translate(369.5 340) rotate(90)" fill="#af693e"/>
+        <rect id="사각형_2459" data-name="사각형 2459" width="5" height="2" transform="translate(371 358) rotate(180)" fill="#af693e"/>
+      </g>
+    </g>
+    <g id="그룹_3677" data-name="그룹 3677" transform="translate(1228 2678)">
+      <g id="그룹_3616-2" data-name="그룹 3616" transform="translate(368 348)">
+        <rect id="사각형_2455-2" data-name="사각형 2455" width="10" height="2" fill="#4d4d4d"/>
+        <rect id="사각형_2458-2" data-name="사각형 2458" width="2" height="2" transform="translate(2 1) rotate(90)" fill="#4d4d4d"/>
+        <rect id="사각형_2483" data-name="사각형 2483" width="2" height="2" transform="translate(10 1) rotate(90)" fill="#4d4d4d"/>
+        <rect id="사각형_2484" data-name="사각형 2484" width="2" height="4" transform="translate(7 9) rotate(90)" fill="#4d4d4d"/>
+      </g>
+      <rect id="사각형_2456-2" data-name="사각형 2456" width="11" height="2" transform="translate(374 348) rotate(90)" fill="#4d4d4d"/>
+    </g>
+  </g>
+</svg>
