@@ -10,6 +10,10 @@ export async function getGeolocation() {
 
 function getGeolocationFromIp() {
   return new Promise<IGeolocation | undefined>(async (resolve) => {
+    if (window.location.protocol !== 'https') {
+      resolve(undefined);
+      return;
+    }
     try {
       const API_URL = 'http://ip-api.com/json';
       const resData = await fetch(API_URL).then((res) => res.json())
