@@ -7,6 +7,10 @@ Observatory
 ex) https://observatory.cemware.com?noHeader=true&lang=en
 * noHeader: 'true' | 'false' (default 'false')
 * lang: 'ko' | 'en' (default 'ko')
+* noSettingButton: 'true' | 'false' (default 'false')
+* noFullscreenButton: 'true' | 'false' (default 'false')
+* noBlockcodingButton: 'true' | 'false' (default 'false')
+* noBlockcodingRunButton: 'true' | 'false' (default 'false')
 
 
 # Data exchange

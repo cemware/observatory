@@ -27,7 +27,7 @@ export const Canvas: React.FC = () => {
     }).then((cemStellarium) => {
       dispatch(ACTIONS.common.setCemStellarium(cemStellarium));
     });
-  }, []);
+  }, [translateFn]);
 
   return (
     <CanvasElement ref={canvasRef} />

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { ACTIONS, useTypedDispatch, useTypedSelector } from '@/store';
 import { useTranslation } from 'react-i18next';
 import { EventBlockType } from '@/cem-blockly';
+import { params } from '@/params';
 
 export const Buttons: React.FC = () => {
   const { cemBlockly, executable } = useTypedSelector(state => state.common);
@@ -62,23 +63,39 @@ export const Buttons: React.FC = () => {
 
   return (
     <ButtonsWrap ref={ref}>
-      {isOpenSetting ? (
-        <SettingCloseButton onClick={onClickSettingOpenButton} data-active={isOpenSetting} data-tooltip={t('닫기')} />
-      ) : (
-        <SettingOpenButton onClick={onClickSettingOpenButton} data-active={isOpenSetting} data-tooltip={t('설정')} />
+      {!params.noSettingButton && (
+        <>
+          {isOpenSetting ? (
+            <SettingCloseButton onClick={onClickSettingOpenButton} data-active={isOpenSetting} data-tooltip={t('닫기')} />
+          ) : (
+            <SettingOpenButton onClick={onClickSettingOpenButton} data-active={isOpenSetting} data-tooltip={t('설정')} />
+          )}
+        </>
       )}
-      {isOpenBlockly ? (
-        <BlocklyCloseButton onClick={onClickBlocklyOpenButton} data-active={isOpenBlockly} data-tooltip={t('닫기')} />
-      ) : (
-        <BlocklyOpenButton onClick={onClickBlocklyOpenButton} data-active={isOpenBlockly} data-tooltip={t('블록코딩 편집')} />
+      <BlocklyButtonsWrap>
+        {!params.noBlockcodingButton && (
+          <>
+            {isOpenBlockly ? (
+              <BlocklyCloseButton onClick={onClickBlocklyOpenButton} data-active={isOpenBlockly} data-tooltip={t('닫기')} />
+            ) : (
+              <BlocklyOpenButton onClick={onClickBlocklyOpenButton} data-active={isOpenBlockly} data-tooltip={t('블록코딩 편집')} />
+            )}
+          </>
+        )}
+        {!params.noBlockcodingRunButton && (
+          <>
+            {!isOpenBlockly && executable && !isRunning && (
+              <BlocklyExcuteButton onClick={onClickBlocklyExecuteButton} data-active={isOpenBlockly} data-tooltip={t('블록코딩 실행')} />
+            )}
+            {!isOpenBlockly && executable && isRunning && (
+              <BlocklyStopButton onClick={onClickBlocklyStopButton} data-active={isOpenBlockly} data-tooltip={t('블록코딩 실행')} />
+            )}
+          </>
+        )}
+      </BlocklyButtonsWrap>
+      {!params.noFullscreenButton && (
+        <FullscreenButton onClick={onClickFullscreenButton} data-tooltip={t('전체화면')} />
       )}
-      {!isOpenBlockly && executable && !isRunning && (
-        <BlocklyExcuteButton onClick={onClickBlocklyExecuteButton} data-active={isOpenBlockly} data-tooltip={t('블록코딩 실행')} />
-      )}
-      {!isOpenBlockly && executable && isRunning && (
-        <BlocklyStopButton onClick={onClickBlocklyStopButton} data-active={isOpenBlockly} data-tooltip={t('블록코딩 실행')} />
-      )}
-      <FullscreenButton onClick={onClickFullscreenButton} data-tooltip={t('전체화면')} />
     </ButtonsWrap>
   )
 }
@@ -136,9 +153,23 @@ const FullscreenButton = styled(Button)`
   background-size: 20px;
 `;
 
-const BlocklyOpenButton = styled(Button)`
+const BlocklyButtonsWrap = styled.div`
+  position: absolute;
   top: 12px;
   left: 12px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+
+  button + button {
+    margin-top: 12px;
+  }
+`;
+
+const BlocklyOpenButton = styled(Button)`
+  position: relative;
+  top: unset;
+  left: unset;
   background-image: url('/images/icon/blockly.svg');
 
   ::after {
@@ -154,7 +185,6 @@ const BlocklyCloseButton = styled(BlocklyOpenButton)`
 `;
 
 const BlocklyExcuteButton = styled(BlocklyOpenButton)`
-  top: 62px;
   background-image: url('/images/icon/blockly-execute.svg');
 `;
 
