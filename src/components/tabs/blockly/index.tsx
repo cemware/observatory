@@ -28,10 +28,10 @@ export const Blockly: React.FC = () => {
     cemBlockly.eventManager.on('run', () => {
       cemStellarium.geometry.clear();
     });
-    const tempdata = localStorage.getItem('tempdata');
-    if (tempdata) {
-      cemBlockly.load(tempdata, true);
-    }
+    // const tempdata = localStorage.getItem('tempdata');
+    // if (tempdata) {
+    //   cemBlockly.load(tempdata, true);
+    // }
     dispatch(ACTIONS.common.setCemBlockly(cemBlockly));
   }, [cemStellarium]);
 
