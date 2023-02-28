@@ -295,7 +295,6 @@ export class CemStellarium {
     this.engine.core.lines.equatorial_jnow.visible = data.visibilities.equatorialLine;
 
     this.eventManager.emit('afterLoad');
-    console.log('load')
   }
 
   public getAllObjects() {
