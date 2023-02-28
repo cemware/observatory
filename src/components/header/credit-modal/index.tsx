@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { VERSION } from '../../../env';
 
 interface DescProps {
   name: string;
@@ -60,6 +61,7 @@ export const CreditModal: React.FC<CreditModalProps> = ({ closeFn }) => {
     <Overlay onClick={onClickOverlay}>
       <ModalWrapper>
         <Title>Credits</Title>
+
         <Dl>
           <Desc
             name="Copyright © 2023 CEMWARE Inc. All rights reserved."
@@ -145,7 +147,9 @@ export const CreditModal: React.FC<CreditModalProps> = ({ closeFn }) => {
           />
         </Dl>
 
+
         <CloseButton onClick={closeFn}>Close</CloseButton>
+        <Version>{`v ${VERSION}`}</Version>
       </ModalWrapper>
     </Overlay>
   )
@@ -174,6 +178,7 @@ const ModalWrapper = styled.div`
   display: flex;
   flex-direction: column;
   overflow: auto;
+  position: relative;
 `;
 
 const Title = styled.div`
@@ -261,6 +266,13 @@ const CloseButton = styled.button`
   :hover {
     color: white;
   }
+`;
+
+const Version = styled.div`
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+  font-size: 12px;
 `;
 
 const Label = styled.label`
