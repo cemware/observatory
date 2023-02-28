@@ -4,7 +4,7 @@
     "name": "Cemware Team",
     "email": "cemware@cemware.com"
   },
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "SEE LICENSE IN license.txt",
   "scripts": {
     "dev": "webpack serve --config webpack.development.js",
