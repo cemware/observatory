@@ -14,14 +14,17 @@ ex) https://observatory.cemware.com?noHeader=true&lang=en
 ```javascript
 /* preadd message event listener */
 window.addEventListener('message', (event) => {
-  if (typeof event.data === 'object' && event.data.type === 'save-skydata') {
+  if (typeof event.data === 'object' && event.data.type === 'observatory-save') {
     console.log(e.data.data); // blob data
+    console.log(e.data.screenshot); // screenshot dataurl
   }
 });
 
+const id = 'any-id';
 const newWindow = window.open('https://observatory.cemware.com', '_blank');
 newWindow.postMessage({
   type: 'save',
+  id: id,
   origin: window.location.origin,
 }, 'https://observatory.cemware.com');
 ```

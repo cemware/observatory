@@ -1,8 +1,10 @@
+import { useTypedSelector } from "@/store";
 import { useCallback, useEffect } from "react";
 import { useGetSaveData } from "./use-get-save-data";
 import { useLoadData } from "./use-load-data";
 
 export const useListenMessage = () => {
+  const { cemStellarium } = useTypedSelector((state) => state.common);
   const getSaveData = useGetSaveData();
   const loadData = useLoadData();
 
@@ -13,14 +15,20 @@ export const useListenMessage = () => {
       const targetOrigin = event.data.origin;
       if (!targetOrigin) return;
       if (!event.source) return;
+      if (!event.data.id) return;
+      if (!cemStellarium) return;
 
       const data = getSaveData();
       if (!data) return;
+      const screenshot = cemStellarium.engine.canvas.toDataURL();
 
       event.source.postMessage({
-        type: 'save-skydata',
+        type: 'observatory-save',
+        id: event.data.id,
         data,
+        screenshot,
       }, { targetOrigin });
+
     } else if (event.data.type === 'load') {
       const title = event.data.title;
       const blob = event.data.blob;
@@ -28,6 +36,7 @@ export const useListenMessage = () => {
         const file = new File([blob], title);
         loadData(file);
       }
+
     }
   }, [getSaveData, loadData]);
 
