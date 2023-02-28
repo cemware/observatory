@@ -10,11 +10,11 @@ export const Blockly: React.FC = () => {
   const dispatch = useTypedDispatch();
   const { i18n } = useTranslation();
 
-  const autoSaveBlockly = useCallback(() => {
-    if (!cemBlockly) return;
-    const data = cemBlockly.save();
-    window.localStorage.setItem('tempdata', data);
-  }, [cemBlockly]);
+  // const autoSaveBlockly = useCallback(() => {
+  //   if (!cemBlockly) return;
+  //   const data = cemBlockly.save();
+  //   window.localStorage.setItem('tempdata', data);
+  // }, [cemBlockly]);
 
   useEffect(() => {
     if (!ref.current || !cemStellarium) return;
@@ -35,16 +35,16 @@ export const Blockly: React.FC = () => {
     dispatch(ACTIONS.common.setCemBlockly(cemBlockly));
   }, [cemStellarium]);
 
-  useEffect(() => {
-    if (!cemStellarium || !cemBlockly) return;
-    window.addEventListener('beforeunload', autoSaveBlockly);
-    cemStellarium.eventManager.on('afterLoad', () => {
-      window.removeEventListener('beforeunload', autoSaveBlockly);
-    });
-    return () => {
-      window.removeEventListener('beforeunload', autoSaveBlockly);
-    }
-  }, [cemStellarium, cemBlockly]);
+  // useEffect(() => {
+  //   if (!cemStellarium || !cemBlockly) return;
+  //   window.addEventListener('beforeunload', autoSaveBlockly);
+  //   cemStellarium.eventManager.on('afterLoad', () => {
+  //     window.removeEventListener('beforeunload', autoSaveBlockly);
+  //   });
+  //   return () => {
+  //     window.removeEventListener('beforeunload', autoSaveBlockly);
+  //   }
+  // }, [cemStellarium, cemBlockly]);
 
   useEffect(() => {
     cemBlockly?.changeLanguage(i18n.language as Language);
