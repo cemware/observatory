@@ -17,7 +17,7 @@ export const i18nGlobal = i18next
       en: { common: COMMON_EN },
     },
     // lng: language,
-    fallbackLng: "en",
+    fallbackLng: "ko",
     interpolation: {
       escapeValue: false,
     },
