@@ -58,7 +58,7 @@ export const Header: React.FC = () => {
 
   return (
     <HeaderWrapper>
-      <Logo src="/images/logo.png" />
+      <Logo src="/images/logo-observatory.svg" />
       <ButtonsWrap>
         <SaveButton data-tooltip={t('파일로 저장')} onClick={onClickSaveButton} />
         <LoadButton data-tooltip={t('파일 불러오기')} onClick={onClickLoadButton} />
@@ -76,7 +76,7 @@ const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
   height: 60px;
-  background: linear-gradient(185deg, #181818, #4c4c4c);
+  background: #282828;
   user-select: none;
   position: relative;
 `;
@@ -86,7 +86,7 @@ const Logo = styled.img`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  height: 56px;
+  height: 36px;
   -webkit-user-drag: none;
 `;
 

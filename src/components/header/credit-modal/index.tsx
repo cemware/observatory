@@ -149,7 +149,10 @@ export const CreditModal: React.FC<CreditModalProps> = ({ closeFn }) => {
 
 
         <CloseButton onClick={closeFn}>Close</CloseButton>
-        <Version>{`v ${VERSION}`}</Version>
+        <Version>
+          <img src="/images/logo-icon.png" width="30" />
+          {`v ${VERSION}`}
+        </Version>
       </ModalWrapper>
     </Overlay>
   )
@@ -270,9 +273,11 @@ const CloseButton = styled.button`
 
 const Version = styled.div`
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   left: 25px;
   font-size: 12px;
+  display: flex;
+  align-items: center;
 `;
 
 const Label = styled.label`
